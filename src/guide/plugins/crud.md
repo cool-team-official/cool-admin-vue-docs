@@ -1,5 +1,7 @@
 # Crud
 
+基于 `@cool-vue/crud` 封装的组件，用于快速构建 CRUD 页面。
+
 ## 配置
 
 配置于 `/src/plugins/crud/config.ts`

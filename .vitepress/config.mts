@@ -46,7 +46,7 @@ export default defineConfig({
     nav: [
       { text: "介绍", link: "/src/introduce/index.md", noIcon: false },
       { text: "教程", link: "/src/guide/quick.md" },
-      { text: "CRUD 组件", link: "/src/guide/crud/index.md" },
+      { text: "CRUD 组件", link: "/src/guide/plugins/crud" },
       { text: "🔥插件市场", link: "https://cool-js.com/plugin/list.html" },
       { text: "交流合作", link: "/src/about/index.md" },
       {
@@ -121,7 +121,6 @@ export default defineConfig({
                 items: [
                   { text: "base", link: "/src/guide/modules/base.md" },
                   { text: "chat", link: "/src/guide/modules/chat.md" },
-                  { text: "demo", link: "/src/guide/modules/demo.md" },
                   { text: "dict", link: "/src/guide/modules/dict.md" },
                   { text: "helper", link: "/src/guide/modules/helper.md" },
                   { text: "recycle", link: "/src/guide/modules/recycle.md" },
@@ -198,7 +197,7 @@ export default defineConfig({
               },
               {
                 text: "cl-search",
-                link: "/src/guide/crud/searchey.md",
+                link: "/src/guide/crud/search.md",
               },
               {
                 text: "cl-refresh-btn",

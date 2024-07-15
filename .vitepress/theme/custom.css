@@ -37,10 +37,10 @@
 
 @media (min-width: 960px) {
   .VPHero.has-image {
-    .name{
+    .name {
       padding-bottom: 20px;
     }
-    .text{
+    .text {
       padding-bottom: 2px;
     }
   }
