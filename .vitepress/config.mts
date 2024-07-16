@@ -75,7 +75,7 @@ export default defineConfig({
           },
           {
             text: "Uni（基于uni-app跨端移动端开发）",
-            link: "https://cool-js.com/uni/introduce.html",
+            link: "https://uni-docs.cool-js.com",
           },
         ],
       },
