@@ -1,4 +1,4 @@
-import DefaultTheme from "vitepress/theme";
+import Layout from "./layout.vue";
 import "./custom.css";
 import { onMounted, watch, nextTick } from "vue";
 import { useRoute } from "vitepress";
@@ -8,7 +8,7 @@ import "@cool-vue/crud/dist/index.css";
 import CodeDemo from "../../components/code-demo.vue";
 
 export default {
-  ...DefaultTheme,
+  Layout,
 
   enhanceApp({ app }) {
     if (!import.meta.env.SSR) {
