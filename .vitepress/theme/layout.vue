@@ -33,9 +33,9 @@ const ad = reactive({
   get() {
     fetch("https://service.cool-js.com/api/app/info/ad/list", {
       method: "POST",
-      body: {
+      body: JSON.stringify({
         channel: 1,
-      },
+      })
     })
       .then((res) => res.json())
       .then((res) => {
