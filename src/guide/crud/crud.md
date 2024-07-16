@@ -26,7 +26,7 @@ const Crud = useCrud(options, callback?)
 
 | 参数                             | 说明                       | 类型                                 |
 | -------------------------------- | -------------------------- | ------------------------------------ |
-| [service](../service)            | 表示当前 crud 要操作的对象 | Service                              |
+| [service](/src/guide/cool/service)            | 表示当前 crud 要操作的对象 | Service                              |
 | [dict](#dict-字典)               | 字典                       | Dict                                 |
 | [permission](#permission-权限)   | 权限                       | Permission                           |
 | [onDelete](#ondelete-删除事件)   | 监听删除事件               | function(selection, {next})          |

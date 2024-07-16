@@ -40,7 +40,7 @@ export default defineConfig({
     editLink: {
       text: "在GitHub上编辑",
       pattern:
-        "https://github.com/cool-team-official/cool-admin-go-next-docs/blob/main/:path",
+        "https://github.com/cool-team-official/cool-admin-vue-docs/blob/main/:path",
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -163,7 +163,6 @@ export default defineConfig({
           },
           {
             text: "CRUD 组件",
-            link: "/src/guide/crud/index.md",
             items: [
               {
                 text: "cl-crud",
@@ -243,8 +242,16 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/cool-team-official/cool-admin-go-next",
+        link: "https://github.com/cool-team-official/cool-admin-vue",
       },
     ],
+  },
+
+  ignoreDeadLinks: ["http://localhost:9000"],
+
+  vite: {
+    ssr: {
+      noExternal: ["@cool-vue/crud", "element-plus", "vue"],
+    },
   },
 });

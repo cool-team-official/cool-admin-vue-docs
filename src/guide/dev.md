@@ -108,7 +108,7 @@ export default (): ModuleConfig => {
 
 目录下的文件，都会以 `Service` 装饰器的路径参数解析成对象合并在 `service` 中。
 
-[在服务中有详细说明，点我跳转](/admin/vue/service.html)
+[在服务中有详细说明，点我跳转](/src/guide/cool/service)
 
 ```ts
 import { Service, BaseService } from "/@/cool";
