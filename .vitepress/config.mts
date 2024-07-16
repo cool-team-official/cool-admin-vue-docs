@@ -109,10 +109,12 @@ export default defineConfig({
           {
             text: "目录结构",
             items: [
+              { text: "packages", link: "/src/guide/packages.md" },
               { text: "config", link: "/src/guide/config.md" },
               {
                 text: "cool",
                 items: [
+                  { text: "router", link: "/src/guide/cool/router.md" },
                   { text: "service", link: "/src/guide/cool/service.md" },
                 ],
               },

@@ -2,16 +2,19 @@
 
 ## 目录结构
 
+在 `src/modules` 或 `src/plugins` 下添加一个目录 `demo`：
+
 ```js
 demo
     ├──pages // 页面路由
     ├──views // 视图路由
+    ├──hooks // 常用函数
     ├──components // 常用组件
     ├──service // 请求服务
     ├──directives // 指令
     ├──static // 静态文件目录
     ├──store // 状态管理
-    ├──... // 其他
+    ├──... // 其他自定义文件
     ├──config.ts // 配置文件
     └──index.ts // 入口文件
 ```
@@ -188,7 +191,7 @@ console.log(test.count); // 1
 
 ## config.ts
 
-模块配置
+模块的配置，程序运行时会读取该文件。
 
 - 全局组件、路由的导入
 

@@ -1,7 +1,5 @@
 # Ai 流程编排
 
-coming soon！！！
-
 [视频演示](https://www.bilibili.com/video/BV1i1421r7ri/)
 
 开发 Ai 应用必备！！！
