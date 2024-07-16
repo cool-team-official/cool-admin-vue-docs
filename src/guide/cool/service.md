@@ -1,6 +1,6 @@
 # service
 
-服务层负责处理发起的请求, 并返回对服务端的响应。
+负责处理发起的请求, 并返回对服务端的响应。
 
 :::tip
 与以往不一样的是，它不再需要前端开发者去创建与接口对应的文件，而是通过 EPS 的方法自动生成。
@@ -68,14 +68,14 @@ export function getUserInfo(data) {
 
 ## EPS
 
-开发环境下，系统通过 `/admin/base/open/eps` 获取所有的接口及实体。然后调用本地服务 `/__cool_eps` 生成 `build/cool/dist/eps.d.ts` 和 `build/cool/dist/eps.json` 两个文件。
+开发环境下，系统在 `编译` `保存代码` `页面刷新` `热更新` 的情况下通过 `@cool-vue/vite-plugin` 生成 `build/cool/eps.d.ts` 和 `build/cool/eps.json` 两个文件。
 
 - eps.d.ts 用于 `service` 的类型提示
 
 - eps.json 用于生成 `service` 数据（`build` 时请确保该文件存在且最新）
 
 :::warning
-控制台出现 `service` 相关的报错，如，`service.xxx is not a function` 等问题时，请查看 `network` 中的 `/admin/base/open/eps` | `/__cool_eps` 接口是否正常
+控制台出现 `service` 相关的报错，如，`service.xxx is not a function` 等问题时，删除 `build/cool/eps.d.ts` 和 `build/cool/eps.json` 两个文件并重新编译。
 :::
 
 ## 编辑

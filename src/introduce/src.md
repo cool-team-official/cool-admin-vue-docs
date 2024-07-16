@@ -12,11 +12,11 @@
 
 Cool-Admin 的后端源码，欢迎大家一起共建维护，积极贡献代码。
 
-[https://github.com/cool-team-official/cool-admin-go-next](https://github.com/cool-team-official/cool-admin-go-next)
+[https://github.com/cool-team-official/cool-admin-vue](https://github.com/cool-team-official/cool-admin-vue)
 
 或
 
-[https://gitee.com/cool-team-official/cool-admin-go-next](https://gitee.com/cool-team-official/cool-admin-go-next)
+[https://gitee.com/cool-team-official/cool-admin-vue](https://gitee.com/cool-team-official/cool-admin-vue)
 
 ## 前端
 
@@ -32,8 +32,8 @@ Cool-Admin 的前端源码，欢迎大家一起共建维护，积极贡献代码
 
 如果文档有缺失，欢迎提交`pr`，您的贡献可能会给其他人来带巨大的帮助。
 
-[https://github.com/cool-team-official/cool-admin-go-next-docs](https://github.com/cool-team-official/cool-admin-go-next-docs)
+[https://github.com/cool-team-official/cool-admin-vue-docs](https://github.com/cool-team-official/cool-admin-vue-docs)
 
 或
 
-[https://gitee.com/cool-team-official/cool-admin-go-next-docs](https://gitee.com/cool-team-official/cool-admin-go-next-docs)
+[https://gitee.com/cool-team-official/cool-admin-vue-docs](https://gitee.com/cool-team-official/cool-admin-vue-docs)

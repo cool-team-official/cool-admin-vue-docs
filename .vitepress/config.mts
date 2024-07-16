@@ -23,6 +23,7 @@ export default defineConfig({
 
     outline: {
       label: "页面导航",
+      level: [2, 3],
     },
     lastUpdated: {
       text: "最后更新于",
@@ -40,7 +41,7 @@ export default defineConfig({
     editLink: {
       text: "在GitHub上编辑",
       pattern:
-        "https://github.com/cool-team-official/cool-admin-go-next-docs/blob/main/:path",
+        "https://github.com/cool-team-official/cool-admin-vue-docs/blob/main/:path",
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -109,10 +110,12 @@ export default defineConfig({
           {
             text: "目录结构",
             items: [
+              { text: "packages", link: "/src/guide/packages.md" },
               { text: "config", link: "/src/guide/config.md" },
               {
                 text: "cool",
                 items: [
+                  { text: "router", link: "/src/guide/cool/router.md" },
                   { text: "service", link: "/src/guide/cool/service.md" },
                 ],
               },
@@ -161,7 +164,6 @@ export default defineConfig({
           },
           {
             text: "CRUD 组件",
-            link: "/src/guide/crud/index.md",
             items: [
               {
                 text: "cl-crud",
@@ -241,8 +243,16 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/cool-team-official/cool-admin-go-next",
+        link: "https://github.com/cool-team-official/cool-admin-vue",
       },
     ],
+  },
+
+  ignoreDeadLinks: ["http://localhost:9000"],
+
+  vite: {
+    ssr: {
+      noExternal: ["@cool-vue/crud", "element-plus", "vue"],
+    },
   },
 });

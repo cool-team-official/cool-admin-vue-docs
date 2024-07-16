@@ -1,26 +1,33 @@
-import DefaultTheme from "vitepress/theme";
+import Layout from "./layout.vue";
 import "./custom.css";
 import { onMounted, watch, nextTick } from "vue";
 import { useRoute } from "vitepress";
 import mediumZoom from "medium-zoom";
-import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
-import Crud from "@cool-vue/crud";
 import "@cool-vue/crud/dist/index.css";
 import CodeDemo from "../../components/code-demo.vue";
 
 export default {
-  ...DefaultTheme,
+  Layout,
 
   enhanceApp({ app }) {
-    app.component("code-demo", CodeDemo);
-    app.use(ElementPlus).use(Crud, {
-      style: {
-        table: {
-          autoHeight: false,
-        },
-      },
-    });
+    if (!import.meta.env.SSR) {
+      app.component("code-demo", CodeDemo);
+
+      import("element-plus").then((res) => {
+        app.use(res.default);
+      });
+
+      import("@cool-vue/crud").then((res) => {
+        app.use(res.default, {
+          style: {
+            table: {
+              autoHeight: false,
+            },
+          },
+        });
+      });
+    }
   },
 
   setup() {

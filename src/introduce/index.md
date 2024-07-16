@@ -4,7 +4,14 @@
 
 ## 技术选型
 
-......
+- [Vue3](https://v3.cn.vuejs.org/)
+- [Element Plus](https://element-plus.org/)
+- [Vite](https://vitejs.dev/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Axios](https://axios-http.com/)
+- [ECharts](https://echarts.apache.org/zh/index.html)
+- [Vue Router](https://router.vuejs.org/zh/index.html)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## 为什么选择 Cool Admin？
 

@@ -100,7 +100,7 @@ const { ViewGroup } = useViewGroup({
 
 #### onEdit
 
-表单编辑时触发，返回值与 [OpenOptions](/admin/vue/crud/form.html#openoptions) 一致
+表单编辑时触发，返回值与 [OpenOptions](/src/guide/crud/form#openoptions) 一致
 
 ```js
 const { ViewGroup } = useViewGroup({
@@ -131,7 +131,7 @@ const { ViewGroup } = useViewGroup({
 
 #### onContextMenu
 
-默认带有 `编辑` 和 `删除`。如需自定义右键菜单，返回值与 [cl-context-menu](/admin/vue/crud/contextmenu.htm) 一致。
+默认带有 `编辑` 和 `删除`。如需自定义右键菜单，返回值与 [cl-context-menu](/src/guide/crud/context-menu) 一致。
 
 ```js
 const { ViewGroup } = useViewGroup({

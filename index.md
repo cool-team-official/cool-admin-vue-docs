@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Cool Admin"
+  name: "Cool Admin(Vue3)"
   text: "一个很酷的后台管理系统开发框架"
   tagline: 开源免费、Ai编码、流程编排、扩展插件、模块化
   actions:
