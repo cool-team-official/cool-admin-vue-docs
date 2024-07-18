@@ -48,7 +48,7 @@ export default defineConfig({
       { text: "介绍", link: "/src/introduce/index.md", noIcon: false },
       { text: "教程", link: "/src/guide/quick.md" },
       { text: "CRUD 组件", link: "/src/guide/plugins/crud" },
-      { text: "🔥插件市场", link: "https://cool-js.com/plugin/list.html" },
+      { text: "🔥插件市场", link: "https://cool-js.com/plugin" },
       { text: "交流合作", link: "/src/about/index.md" },
       {
         text: "v7.1.0",
