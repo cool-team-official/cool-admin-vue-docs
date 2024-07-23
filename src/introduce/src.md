@@ -8,15 +8,25 @@
 这并不意味着您可以将 cool-admin 应用到非法的领域，比如涉及赌博，暴力等方面。如因此产生纠纷等法律问题，cool-admin 不承担任何责任。
 :::
 
-## 后端
+## 后端 Java
 
-Cool-Admin 的后端源码，欢迎大家一起共建维护，积极贡献代码。
+Cool-Admin-Java 的后端源码，欢迎大家一起共建维护，积极贡献代码。
 
-[https://github.com/cool-team-official/cool-admin-vue](https://github.com/cool-team-official/cool-admin-vue)
+[https://github.com/cool-team-official/cool-admin-java](https://github.com/cool-team-official/cool-admin-java)
 
 或
 
-[https://gitee.com/cool-team-official/cool-admin-vue](https://gitee.com/cool-team-official/cool-admin-vue)
+[https://gitee.com/cool-team-official/cool-admin-java](https://gitee.com/cool-team-official/cool-admin-java)
+
+## 后端 Midway
+
+Cool-Admin-Midway 的后端源码，欢迎大家一起共建维护，积极贡献代码。
+
+[https://github.com/cool-team-official/cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway)
+
+或
+
+[https://gitee.com/cool-team-official/cool-admin-midway](https://gitee.com/cool-team-official/cool-admin-midway)
 
 ## 前端
 
