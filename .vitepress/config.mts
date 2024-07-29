@@ -51,15 +51,11 @@ export default defineConfig({
       { text: "🔥插件市场", link: "https://cool-js.com/plugin" },
       { text: "交流合作", link: "/src/about/index.md" },
       {
-        text: "v7.1.0",
+        text: "v7.2.0",
         items: [
           {
             text: "更新日志",
             link: "/src/todo/update.md",
-          },
-          {
-            text: "版本计划",
-            link: "/src/todo/plan.md",
           },
         ],
       },
@@ -129,7 +125,6 @@ export default defineConfig({
                   { text: "recycle", link: "/src/guide/modules/recycle.md" },
                   { text: "space", link: "/src/guide/modules/space.md" },
                   { text: "task", link: "/src/guide/modules/task.md" },
-                  { text: "theme", link: "/src/guide/modules/theme.md" },
                   { text: "user", link: "/src/guide/modules/user.md" },
                 ],
               },
@@ -141,6 +136,7 @@ export default defineConfig({
                     text: "distpicker",
                     link: "/src/guide/plugins/distpicker.md",
                   },
+                  { text: "echarts", link: "/src/guide/plugins/echarts.md" },
                   {
                     text: "editor-monaco",
                     link: "/src/guide/plugins/editor-monaco.md",
@@ -153,7 +149,12 @@ export default defineConfig({
                     text: "editor-wang",
                     link: "/src/guide/plugins/editor-wang.md",
                   },
+                  {
+                    text: "element-ui",
+                    link: "/src/guide/plugins/element-ui.md",
+                  },
                   { text: "excel", link: "/src/guide/plugins/excel.md" },
+                  { text: "theme", link: "/src/guide/plugins/theme.md" },
                   { text: "upload", link: "/src/guide/plugins/upload.md" },
                   { text: "view", link: "/src/guide/plugins/view.md" },
                 ],
@@ -223,17 +224,8 @@ export default defineConfig({
       },
 
       {
-        text: "计划&更新",
-        items: [
-          {
-            text: "更新",
-            link: "/src/todo/update.md",
-          },
-          {
-            text: "计划",
-            link: "/src/todo/plan.md",
-          },
-        ],
+        text: "更新日志",
+        link: "/src/todo/update.md",
       },
       {
         text: "交流合作",
