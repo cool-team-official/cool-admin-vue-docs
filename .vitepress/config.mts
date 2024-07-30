@@ -64,7 +64,7 @@ export default defineConfig({
         items: [
           {
             text: "Cool Admin(Nodejs版)",
-            link: "https://cool-js.com",
+            link: "https://node.cool-admin.com",
           },
           {
             text: "Cool Admin(Java版)",

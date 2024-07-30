@@ -32,3 +32,7 @@ pnpm dev
 密码：123456
 
 <img src="/show/admin.png" />
+
+## 异常 ！！！
+
+如遇到验证码无法显示，请运行[后端服务](https://node.cool-admin.com)
