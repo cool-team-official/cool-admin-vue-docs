@@ -30,14 +30,14 @@ import "/~/crud/src/static/index.scss";
 
 vite 扩展插件，主要处理以下几点：
 
-- 注入虚拟模块 `virtual:eps` `virtual:ctx` 等
+- 注入虚拟模块 `virtual:eps` `virtual:ctx` `virtual:svg-register` `virtual:svg-icons` 等
 
 - 生成 eps
 
-- 解析 svg
+- 解析 svg，使用 svgo 压缩
 
-- 创建菜单问案件
+- 创建菜单文件
 
 - script 标签绑定值
 
-- 生成 uniapp 的上下文
+- 生成 admin / uniapp 的上下文
