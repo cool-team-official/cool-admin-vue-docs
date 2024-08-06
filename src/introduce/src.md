@@ -18,6 +18,10 @@ Cool-Admin-Java 的后端源码，欢迎大家一起共建维护，积极贡献�
 
 [https://gitee.com/cool-team-official/cool-admin-java](https://gitee.com/cool-team-official/cool-admin-java)
 
+或
+
+[https://gitcode.com/cool_team/cool-admin-java](https://gitcode.com/cool_team/cool-admin-java)
+
 ## 后端 Midway
 
 Cool-Admin-Midway 的后端源码，欢迎大家一起共建维护，积极贡献代码。
@@ -28,6 +32,10 @@ Cool-Admin-Midway 的后端源码，欢迎大家一起共建维护，积极贡�
 
 [https://gitee.com/cool-team-official/cool-admin-midway](https://gitee.com/cool-team-official/cool-admin-midway)
 
+或
+
+[https://gitcode.com/cool_team/cool-admin-midway](https://gitcode.com/cool_team/cool-admin-midway)
+
 ## 前端
 
 Cool-Admin 的前端源码，欢迎大家一起共建维护，积极贡献代码。
@@ -37,6 +45,10 @@ Cool-Admin 的前端源码，欢迎大家一起共建维护，积极贡献代码
 或
 
 [https://gitee.com/cool-team-official/cool-admin-vue](https://gitee.com/cool-team-official/cool-admin-vue)
+
+或
+
+[https://gitcode.com/cool_team/cool-admin-vue](https://gitcode.com/cool_team/cool-admin-vue)
 
 ## 文档
 
