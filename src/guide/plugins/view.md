@@ -26,7 +26,7 @@ PC 端：
 </cl-view-group>
 
 <script setup lang="ts">
-  import { useViewGroup } from "/$/base";
+  import { useViewGroup } from "/@/plugins/view";
 
   const { ViewGroup } = useViewGroup();
 </script>
