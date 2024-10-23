@@ -51,7 +51,7 @@ export default defineConfig({
       { text: "🔥插件市场", link: "https://cool-js.com/plugin" },
       { text: "交流合作", link: "/src/about/index.md" },
       {
-        text: "v7.2.0",
+        text: "v7.3.0",
         items: [
           {
             text: "更新日志",
@@ -86,7 +86,7 @@ export default defineConfig({
             link: "/src/introduce/index.md",
           },
           {
-            text: "演示",
+            text: "演示 / 示例",
             link: "/src/introduce/show.md",
           },
           {
