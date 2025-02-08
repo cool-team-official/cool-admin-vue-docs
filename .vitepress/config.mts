@@ -51,7 +51,7 @@ export default defineConfig({
       { text: "🔥插件市场", link: "https://cool-js.com/plugin" },
       { text: "交流合作", link: "/src/about/index.md" },
       {
-        text: "v7.3.0",
+        text: "v8.0.0",
         items: [
           {
             text: "更新日志",
@@ -111,6 +111,7 @@ export default defineConfig({
               {
                 text: "cool",
                 items: [
+                  { text: "index.vue", link: "/src/guide/cool/index.vue.md" },
                   { text: "router", link: "/src/guide/cool/router.md" },
                   { text: "service", link: "/src/guide/cool/service.md" },
                 ],
@@ -119,7 +120,6 @@ export default defineConfig({
                 text: "modules",
                 items: [
                   { text: "base", link: "/src/guide/modules/base.md" },
-                  { text: "chat", link: "/src/guide/modules/chat.md" },
                   { text: "dict", link: "/src/guide/modules/dict.md" },
                   { text: "helper", link: "/src/guide/modules/helper.md" },
                   { text: "recycle", link: "/src/guide/modules/recycle.md" },
@@ -133,14 +133,14 @@ export default defineConfig({
                 items: [
                   { text: "crud", link: "/src/guide/plugins/crud.md" },
                   {
+                    text: "dev-tools",
+                    link: "/src/guide/plugins/dev-tools.md",
+                  },
+                  {
                     text: "distpicker",
                     link: "/src/guide/plugins/distpicker.md",
                   },
                   { text: "echarts", link: "/src/guide/plugins/echarts.md" },
-                  {
-                    text: "editor-monaco",
-                    link: "/src/guide/plugins/editor-monaco.md",
-                  },
                   {
                     text: "editor-preview",
                     link: "/src/guide/plugins/editor-preview.md",
@@ -154,6 +154,9 @@ export default defineConfig({
                     link: "/src/guide/plugins/element-ui.md",
                   },
                   { text: "excel", link: "/src/guide/plugins/excel.md" },
+                  { text: "i18n", link: "/src/guide/plugins/i18n.md" },
+                  { text: "iconfont", link: "/src/guide/plugins/iconfont.md" },
+                  { text: "tailwind", link: "/src/guide/plugins/tailwind.md" },
                   { text: "theme", link: "/src/guide/plugins/theme.md" },
                   { text: "upload", link: "/src/guide/plugins/upload.md" },
                   { text: "view", link: "/src/guide/plugins/view.md" },
@@ -245,6 +248,14 @@ export default defineConfig({
   vite: {
     ssr: {
       noExternal: ["@cool-vue/crud", "element-plus", "vue"],
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          charset: false,
+          api: "modern-compiler",
+        },
+      },
     },
   },
 });

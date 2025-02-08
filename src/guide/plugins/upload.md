@@ -101,14 +101,6 @@ function onBeforeUpload(file: any, item: any) {
 
 ## 文件空间
 
-- 在文件空间中选择
-
-```html
-<cl-upload is-space />
-```
-
-- 打开文件空间
-
 ```html
 <cl-upload-space />
 ```

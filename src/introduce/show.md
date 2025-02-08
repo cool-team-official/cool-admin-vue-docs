@@ -1,6 +1,6 @@
 # 演示
 
-![](/show/admin.png)
+![](/show/admin.jpg)
 
 → https://show.cool-admin.com
 

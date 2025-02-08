@@ -1,6 +1,6 @@
 # 简介
 
-![](/show/admin.png){data-zoomable}
+![](/show/admin.jpg){data-zoomable}
 
 ## 技术选型
 
@@ -25,7 +25,7 @@ Cool Admin 做为后来者有后发优势，主要特点：
 - 代码简洁，不像一般代码生成器生成一堆冗余代码，Cool 只需极少编码即可实现大部分需求；
 - ......
 
-![](/show/admin.png){data-zoomable}
+![](/show/admin.jpg){data-zoomable}
 
 ![](/show/flow.jpeg){data-zoomable}
 

@@ -61,13 +61,7 @@
 </template>
 
 <script lang="tsx" name="crud" setup>
-import {
-  useCrud,
-  useUpsert,
-  useTable,
-  useAdvSearch,
-  setFocus,
-} from "@cool-vue/crud";
+import { useCrud, useUpsert, useTable, useAdvSearch } from "@cool-vue/crud";
 import FormBtn from "./form-btn.vue";
 import { reactive } from "vue";
 import { ElMessage, ElMessageBox } from "element-plus";
@@ -117,14 +111,6 @@ const Upsert = useUpsert({
         ],
       },
     },
-    {
-      label: "头像",
-      prop: "avatar",
-      group: "base",
-      component: {
-        name: "cl-upload",
-      },
-    },
     // 动态值
     () => {
       return {
@@ -146,23 +132,13 @@ const Upsert = useUpsert({
       },
     },
     {
-      label: "身份证照片",
-      prop: "idCardPic",
+      label: "身份证号",
+      prop: "idCard",
       group: "other",
       component: {
-        name: "cl-upload",
-        props: {
-          isSpace: true,
-          size: [200, 300],
-        },
+        name: "el-input",
       },
     },
-  ],
-
-  // 插件
-  plugins: [
-    // 自动聚焦
-    setFocus("name"),
   ],
 
   // 详情钩子
@@ -231,13 +207,13 @@ const Table = useTable({
         {
           label: "姓名",
           prop: "name",
-          minWidth: 120
+          minWidth: 120,
         },
         {
           label: "存款(元)",
           prop: "wages",
           sortable: true,
-          minWidth: 120
+          minWidth: 120,
         },
       ],
     },
@@ -245,16 +221,12 @@ const Table = useTable({
       label: "状态",
       prop: "status",
       dict: options.status,
-      minWidth: 100
+      minWidth: 100,
     },
     {
       type: "op",
       width: 240,
-      buttons: [
-        "info",
-        "edit",
-        "delete"
-      ],
+      buttons: ["info", "edit", "delete"],
     },
   ],
 });
@@ -263,7 +235,6 @@ const Table = useTable({
 function onSummaryMethod({ data }: { data: any[] }) {
   return [
     "合计",
-    "",
     "",
     data.reduce((a, b) => parseFloat(a + Number(b.wages)), 0).toFixed(2),
   ];

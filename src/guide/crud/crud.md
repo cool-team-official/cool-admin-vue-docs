@@ -4,6 +4,8 @@
 
 ## 示例
 
+[更多示例参考](https://show.cool-admin.com/demo/crud)
+
 <crud-demo />
 
 <script lang="ts" setup>
@@ -24,13 +26,13 @@ const Crud = useCrud(options, callback?)
 
 ## Options
 
-| 参数                             | 说明                       | 类型                                 |
-| -------------------------------- | -------------------------- | ------------------------------------ |
-| [service](/src/guide/cool/service)            | 表示当前 crud 要操作的对象 | Service                              |
-| [dict](#dict-字典)               | 字典                       | Dict                                 |
-| [permission](#permission-权限)   | 权限                       | Permission                           |
-| [onDelete](#ondelete-删除事件)   | 监听删除事件               | function(selection, {next})          |
-| [onRefresh](#onrefresh-刷新事件) | 监听刷新事件               | function(params, {next,done,render}) |
+| 参数                               | 说明                       | 类型                                 |
+| ---------------------------------- | -------------------------- | ------------------------------------ |
+| [service](/src/guide/cool/service) | 表示当前 crud 要操作的对象 | Service                              |
+| [dict](#dict-字典)                 | 字典                       | Dict                                 |
+| [permission](#permission-权限)     | 权限                       | Permission                           |
+| [onDelete](#ondelete-删除事件)     | 监听删除事件               | function(selection, {next})          |
+| [onRefresh](#onrefresh-刷新事件)   | 监听刷新事件               | function(params, {next,done,render}) |
 
 ## dict 字典
 
@@ -162,8 +164,6 @@ const Crud = useCrud({
   },
 });
 ```
-
-<crud-delete />
 
 如需修改成根据其他字段删除数据（需后台接口配合），如下：
 

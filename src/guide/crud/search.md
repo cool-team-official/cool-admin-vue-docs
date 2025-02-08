@@ -2,6 +2,91 @@
 
 筛选组件
 
+## 使用
+
+```vue
+<template>
+  <cl-crud ref="Crud">
+    <cl-row>
+      <cl-search ref="Search" />
+    </cl-row>
+  </cl-crud>
+</template>
+
+<script lang="ts" setup>
+import { useCrud, useSearch } from "@cool-vue/crud";
+
+const Search = useSearch({
+  items: [
+    {
+      label: "昵称",
+      prop: "name",
+      component: {
+        name: "el-input",
+      },
+    },
+  ],
+});
+
+const Crud = useCrud({ service: "test" }, (app) => {
+  app.refresh();
+});
+</script>
+```
+
+## setAuto 插件
+
+8.0 版本开始，默认自动根据 `service` 加载筛选项，无需手动设置 `items` 参数。
+
+默认在 `plugins/crud/config.ts` 文件中添加了 `setAuto` 插件：
+
+```js
+{
+  search: {
+    // 插件列表
+    plugins: [
+      // 自动添加搜索组件
+      Plugins.Search.setAuto(),
+    ];
+  }
+}
+```
+
+如需自定义筛选项，请在 `当前页面` 设置 `customComponent` 参数，如：
+
+```js
+import { Plugins } from "/#/crud";
+
+const Search = useSearch({
+  plugins: [
+    Plugins.Search.setAuto({
+      customComponent(field) {
+        if (field.propertyName == "name") {
+          return {
+            name: "cl-select",
+            props: {
+              options: [
+                {
+                  label: "张三",
+                  value: "1",
+                },
+                {
+                  label: "李四",
+                  value: "2",
+                },
+              ],
+            },
+          };
+        }
+
+        // null 则不操作，按系统默认操作
+        return null;
+      },
+    }),
+  ],
+});
+```
+
 ## 示例
 
 默认点击搜索按钮才会刷新数据，添加 `props.onChange` 参数可以在值改变时触发刷新
@@ -190,5 +275,7 @@
 | data      | 默认表单值                 | object                   |        |        |
 | items     | [表单项配置](./form#items) | ClForm.Item[]            |        |        |
 | reset-btn | 是否显示重置按钮           | boolean                  |        | false  |
+| collapse  | 是否需要折叠               | boolean                  |        | false  |
+| inline    | 是否行内                   | boolean                  |        | true   |
 | on-load   | 初始化时钩子               | function(data)           |        |        |
 | on-search | 搜索时钩子                 | function(data, { next }) |        |        |

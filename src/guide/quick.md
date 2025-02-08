@@ -31,7 +31,7 @@ pnpm dev
 账号：admin
 密码：123456
 
-<img src="/show/admin.png" />
+<img src="/show/admin.jpg" />
 
 ## 异常 ！！！
 

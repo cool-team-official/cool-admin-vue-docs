@@ -8,8 +8,9 @@
 
 ```ts
 import type { Merge, ModuleConfig } from "/@/cool";
-
-import Crud, { locale, setFocus } from "@cool-vue/crud";
+import { config } from "/@/config";
+import { Plugins } from "./plugins";
+import Crud, { locale } from "@cool-vue/crud";
 import "@cool-vue/crud/dist/index.css";
 
 export default (): Merge<ModuleConfig, CrudOptions> => {
@@ -43,7 +44,7 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
           prop: "prop",
         },
         // 语言
-        label: locale.zhCn,
+        label: locale[config.i18n.locale],
       },
       // 样式
       style: {
@@ -67,7 +68,7 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
           // 插件列表
           plugins: [
             // 自动聚焦插件
-            setFocus(),
+            Plugins.Form.setFocus(),
           ],
         },
         // 表格配置
@@ -95,21 +96,31 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
             opWidth: 160,
           },
         },
+        search: {
+          // 插件列表
+          plugins: [
+            // 自动添加搜索组件
+            Plugins.Search.setAuto(),
+          ],
+        },
       },
     },
   };
 };
 ```
 
-## cl-switch
+## 组件
+
+### cl-switch
 
 开关，`cl-table` 中使用，值改变时会自动调用 `update` 接口
 
-| 参数          | 说明   | 类型                      | 可选值 | 默认值 |
-| ------------- | ------ | ------------------------- | ------ | ------ |
-| modelValue    | 绑定值 | number / string / boolean |        |        |
-| activeValue   | 选中值 | number / string / boolean |        | true   |
-| inactiveValue | 未选值 | number / string / boolean |        | false  |
+| 参数          | 说明       | 类型                      | 可选值 | 默认值 |
+| ------------- | ---------- | ------------------------- | ------ | ------ |
+| modelValue    | 绑定值     | number / string / boolean |        |        |
+| activeValue   | 选中值     | number / string / boolean |        | true   |
+| inactiveValue | 未选值     | number / string / boolean |        | false  |
+| check         | 操作前提示 | boolean                   |        | false  |
 
 下面是在 `cl-table` 的使用示例：
 
@@ -137,19 +148,21 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
 
 <img src="/images/switch.png" />
 
-## cl-select
+### cl-select
 
 下拉选择，设置 `prop` 会自动刷新列表并带入请求参数 `{ page: 1, [prop]: value }`
 
-| 参数        | 说明                       | 类型            | 可选值 | 默认值 |
-| ----------- | -------------------------- | --------------- | ------ | ------ |
-| modelValue  | 绑定值                     | string / number |        |        |
-| options     | 列表                       | array           |        |        |
-| prop        | 搜索的请求字段             | string          |        |        |
-| labelKey    | 作为 label 唯一标识的键名  | string          |        | label  |
-| valueKey    | 作为 value 唯一标识的键名  | string          |        | value  |
-| tree        | 树形选择器                 | boolean         |        | false  |
-| allLevelsId | 是否返回选中层级下的所有值 | boolean         |        | false  |
+| 参数            | 说明                       | 类型            | 可选值 | 默认值 |
+| --------------- | -------------------------- | --------------- | ------ | ------ |
+| modelValue      | 绑定值                     | string / number |        |        |
+| options         | 列表                       | array           |        |        |
+| prop            | 搜索的请求字段             | string          |        |        |
+| labelKey        | 作为 label 唯一标识的键名  | string          |        | label  |
+| valueKey        | 作为 value 唯一标识的键名  | string          |        | value  |
+| tree            | 树形选择器                 | boolean         |        | false  |
+| allLevelsId     | 是否返回选中层级下的所有值 | boolean         |        | false  |
+| checkStrictly   | 是否父子不互相关联         | boolean         |        | false  |
+| refreshOnChange | 值变化刷新                 | boolean         |        | true   |
 
 下面是做筛选的使用示例：
 
@@ -194,6 +207,18 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
 </script>
 ```
 
+### cl-number-range
+
+数字范围输入
+
+| 参数             | 说明   | 类型   | 可选值 | 默认值 |
+| ---------------- | ------ | ------ | ------ | ------ |
+| modelValue       | 绑定值 | array  |        |        |
+| startPlaceholder | 起     | string |        | 起     |
+| endPlaceholder   | 止     | string |        | 止     |
+| min              | 最小   | number |        | 0      |
+| max              | 最大   | number |        | 100000 |
+
 ### cl-column-custom
 
 `cl-table` 自定义列。可自行扩展，如拖动排序
@@ -227,3 +252,15 @@ export default (): Merge<ModuleConfig, CrudOptions> => {
 | width            | 宽度             | string  |                                                                                |                     |
 | quickBtn         | 是否显示快速按钮 | boolean |                                                                                |                     |
 | defaultQuickType | 快速按钮类型     | string  | day / week / month / year                                                      | day                 |
+
+### cl-user-select
+
+用户选择器，通过部门或者角色选择用户
+
+| 参数       | 说明                      | 类型    | 可选值 | 默认值   |
+| ---------- | ------------------------- | ------- | ------ | -------- |
+| modelValue | 绑定值                    | string  |        |          |
+| multiple   | 是否多选                  | boolean |        | false    |
+| title      | 标题                      | string  |        | false    |
+| immediate  | 是否立即请求              | boolean |        | false    |
+| labelKey   | 用户名称标识的键名 | string  |        | nickName |

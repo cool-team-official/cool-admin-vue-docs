@@ -80,28 +80,7 @@ export function getUserInfo(data) {
 
 ## 编辑
 
-程序默认使用 `eps` 方式（即后端所有开放的接口，都会在前端生成对应的方法），无需自己手动一个个添加：
-
-```js
-// /config/index.ts
-{
-  test: {
-    eps: true;
-  }
-}
-```
-
-在一些特殊的情况下，也可以自己 `自定义配置` service，在 `/src/modules/demo/service` 目录下新建 `test.ts` 文件：
-
-```ts
-// /src/modules/demo/service/test.ts
-import { BaseService, Service } from "/@/cool";
-
-@Service("demo/test")
-class Test extends BaseService {}
-
-export default Test;
-```
+程序默认使用 `eps` 方式（即后端所有开放的接口，都会在前端生成对应的方法），无需自己手动一个个添加
 
 ## 使用
 

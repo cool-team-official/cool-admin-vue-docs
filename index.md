@@ -14,7 +14,7 @@ hero:
       text: 源码下载
       link: /src/introduce/src
   image:
-    src: /show/admin.png
+    src: /show/admin.jpg
     alt: cool-admin
 
 features:

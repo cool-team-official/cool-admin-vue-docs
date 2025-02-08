@@ -10,7 +10,6 @@ demo
     ├──views // 视图路由
     ├──hooks // 常用函数
     ├──components // 常用组件
-    ├──service // 请求服务
     ├──directives // 指令
     ├──static // 静态文件目录
     ├──store // 状态管理
@@ -68,7 +67,11 @@ export default (): ModuleConfig => {
 方式 1：
 
 ```html
-<script lang="ts" name="demo" setup></script>
+<script lang="ts" setup>
+  defineOptions({
+    name: "demo",
+  });
+</script>
 ```
 
 方式 2：
@@ -79,12 +82,6 @@ export default (): ModuleConfig => {
     name: "demo",
   });
 </script>
-```
-
-`setup` 中：
-
-```html
-<script lang="ts" name="my-info" setup></script>
 ```
 
 ## components
@@ -102,34 +99,6 @@ export default (): ModuleConfig => {
     ],
   };
 };
-```
-
-## service
-
-目录下的文件，都会以 `Service` 装饰器的路径参数解析成对象合并在 `service` 中。
-
-[在服务中有详细说明，点我跳转](/src/guide/cool/service)
-
-```ts
-import { Service, BaseService } from "/@/cool";
-
-@Service("demo/test")
-class Test extends BaseService {
-  t1() {
-    return this.request({
-      url: "t1",
-    });
-  }
-}
-```
-
-使用：
-
-```ts
-import { useCool } from "/@/cool";
-
-const { service } = useCool();
-service.demo.test.t1();
 ```
 
 ## directives
@@ -205,12 +174,35 @@ import { Vue } from "vue";
 
 export default (): ModuleConfig => {
   return {
+    // 是否启用
+    enable: true,
+
+    // 插件名称
     label: "插件名称",
+
+    // 插件描述
     description: "插件描述",
+
+    // 作者
     author: "作者",
     version: "1.0.0",
     updateTime: "2024-02-02",
     logo: "",
+
+    // 忽略
+    ignore: {
+      // 忽略进度条的请求
+      NProgress: [
+        "/base/open/eps",
+        "/base/comm/person",
+        "/base/comm/permmenu",
+        "/base/comm/upload",
+        "/base/comm/uploadMode",
+      ],
+
+      // 忽略 token 的路由
+      token: ["/login", "/401", "/403", "/404", "/500", "/502"],
+    },
 
     // 排序
     order: 0,
@@ -227,15 +219,33 @@ export default (): ModuleConfig => {
         component: () => import("..."),
       },
     ],
-    // 全局组件
+
+    // 注册全局组件
     components: [],
+
     // 视图路由
     views: [],
+
     // 页面路由
     pages: [],
 
-    // 事件
+    // 顶部工具栏
+    toolbar: {
+      order: 1,
+      pc: true, // 是否在 pc 端显示
+      h5: true, // 是否在 h5 端显示
+      component: import("./components/index.vue"),
+    },
+
+    // 注入全局组件
+    index: {
+      component: import("./components/index.vue"),
+    },
+
+    // 安装时触发
     install(app: Vue) {},
+
+    // 加载时触发
     onLoad(events) {},
   };
 };

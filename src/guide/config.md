@@ -37,10 +37,9 @@ export const proxy = {
 
 ### 切换代理
 
-默认使用 `dev` 代理，如需修改只要在地址栏拼接参数 `proxy=${代理前缀}`，以便于调试多个服务：
+点击页面右下角的开发工具，代理列表由 `config/proxy.ts` 文件中的配置生成，点击切换代理，即可切换请求地址。
 
-- `http://localhost:9000?proxy=dev` 切换到 `dev`
-- `http://localhost:9000?proxy=prod` 切换到 `prod`
+<img src="/public/images/dev-tools-proxy.jpg" />
 
 ## 请求地址
 
@@ -49,36 +48,25 @@ export const proxy = {
 开发：
 
 ```ts
-import { getUrlParam, storage } from "../utils";
-import { proxy } from "./proxy";
+import { host, value } from "./proxy";
 
 export default {
   // 根地址
-  host: proxy["/dev/"].target,
+  host,
 
   // 请求地址
-  get baseUrl() {
-    let proxy = getUrlParam("proxy");
-
-    if (proxy) {
-      storage.set("proxy", proxy);
-    } else {
-      proxy = storage.get("proxy") || "dev";
-    }
-
-    return `/${proxy}`;
-  },
+  baseUrl: `/${value}`,
 };
 ```
 
 生产：
 
 ```ts
-import { proxy } from "./proxy";
+import { host } from "./proxy";
 
 export default {
   // 根地址
-  host: proxy["/prod/"].target,
+  host,
 
   // 请求地址
   baseUrl: "/api",
@@ -109,42 +97,37 @@ export default {
 			mode: "history",
 			// 转场动画
 			transition: "slide"
-		},
-
-		// 字体图标库
-		iconfont: []
+		}
 	},
 
-	// 忽略规则
+	// 国际化配置
+	i18n: {
+		locale: storage.get('locale') || 'zh-cn',
+		languages: [
+			{
+				label: '中文',
+				value: 'zh-cn'
+			},
+			{
+				label: '繁体中文',
+				value: 'zh-tw'
+			},
+			{
+				label: 'English',
+				value: 'en'
+			}
+		]
+	},
+
+	// 忽略规则，不同模块可单独配置
 	ignore: {
 		// 不显示请求进度条
-		NProgress: [
-			"/__cool_eps",
-			"/base/open/eps",
-			"/base/comm/person",
-			"/base/comm/permmenu",
-			"/base/comm/upload",
-			"/base/comm/uploadMode",
-			"/dict/info/data",
-			"/space/info/add"
-		],
+		NProgress: ['__cool_*'],
 		// 页面不需要登录验证
-		token: ["/login", "/401", "/403", "/404", "/500", "/502"]
-	},
-
-	// 调试
-	test: {
-		token: "",
-		eps: true
+		token: []
 	},
 
 	// 当前环境
 	...(isDev ? dev : prod)
 };
 ```
-
-配置 `iconfont`: [https://www.iconfont.cn/](https://www.iconfont.cn/)
-
-<!-- <img src='./images/iconfont-1.png' />
-
-<img src='./images/iconfont-2.png' /> -->
