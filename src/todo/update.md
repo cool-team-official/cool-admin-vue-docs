@@ -6,6 +6,8 @@
 
 ## v8.0.0（2025-02-10）
 
+[7.x 升级方案](/src/todo/upgrade)
+
 - 支持多语言 vue-i18n
 - 添加 @cool-vue/ai 插件，支持 ai 翻译等
 - 添加 dev-tools 插件，快捷切换代理，查看 eps 等
