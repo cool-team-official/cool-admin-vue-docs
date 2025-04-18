@@ -1,4 +1,4 @@
-# Ai 编码
+# 人工智能编码
 
 [预览地址 click!!](https://show.cool-admin.com/helper/ai-code)
 
