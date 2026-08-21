@@ -16,7 +16,7 @@
 | and  | 数组 | 用于检测数组中的元素是否全部满足指定条件 |
 
 ```html
-<el-button v-permission="service.user.permission.add"> 新增 </el-button>
+<el-button v-permission="service.user.info.permission.add"> 新增 </el-button>
 ```
 
 ```html
